@@ -4,7 +4,7 @@ const form = document.querySelector('form')
 
 const changeHeading = function(ev) {
 
-console.log("run the function")
+
   ev.preventDefault()
 
 
