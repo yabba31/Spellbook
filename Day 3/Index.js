@@ -36,6 +36,7 @@ const app = {
 
 
 
+
     // collect an array of renderProperty's return values
 
     // (an array of <span> elements)
@@ -52,7 +53,7 @@ const app = {
 
     item.classList.add('spell')
 
-
+    spellsA.push (item)
 
     // append each <span> to the <li>
 
@@ -62,12 +63,12 @@ const app = {
 
     })
 
+    spellsA.push (item)
 
 
     return item
 
   },
-
 
 
   handleSubmit: function(ev) {
@@ -105,6 +106,11 @@ const app = {
   },
 
 }
+//create array
+
+const spellsA = []
+
+//intizine Arrray
 
 
 
