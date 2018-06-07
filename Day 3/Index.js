@@ -25,8 +25,27 @@ const app = {
     return el
 
   },
+  //set function for button 
+  
+  createDeletebutton: function(name, value){
+    const button = document.createElement('button')
+    button.textContent = value
+    button.classList.add (name)
 
+   button.addEventListener("click",(ev) => this.deleteElement(ev))
+    return button
+  },
 
+  //creation of function for deletion
+
+  deleteElement: function(ev){
+    const button = ev.target;
+    const listitem = button.parentNode
+    const index= spellsA.indexOf(listitem)
+    spellsA.splice (index,1)
+    listitem.parentNode.removeChild(listitem)
+    
+  },
 
   renderItem: function(spell) {
 
@@ -62,6 +81,11 @@ const app = {
       item.appendChild(el)
 
     })
+   button= this.createDeletebutton('classbutton','deletebutton')
+   
+    item.appendChild(button)
+
+
 
     spellsA.push (item)
 
@@ -110,7 +134,6 @@ const app = {
 
 const spellsA = []
 
-//intizine Arrray
 
 
 
